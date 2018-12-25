@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>日历控件V1.0.0</title>
+		<link rel="stylesheet" type="text/css" href="css/calender-min-1.0.0.css"/>
+		<script src="js/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+		
+	</head>
+	<body>
+		<div id="calendar_toolbar" class="wc-cal-toolbar">
+			<input type="button" name="" id="wc_pre_month" value="上一月" />
+			<span class="month"></span>
+			<input type="button" name="" id="wc_next_month" value="下一月" />
+		</div>
+		<div id="calendar_container" class="wc-calendar">
+			<div class="title">
+				<table>
+					<tbody>
+						<tr>
+							<td>星期一</td>
+							<td>星期二</td>
+							<td>星期三</td>
+							<td>星期四</td>
+							<td>星期五</td>
+							<td>星期六</td>
+							<td>星期天</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="body">
+						
+			</div>
+		</div>
+		
+		
+	<script src="js/calendar-min-1.0.0.js" type="text/javascript" charset="utf-8"></script>
+	<script>
+		
+		var data = [
+			{
+				"day": "2018-12-11",
+				"type": "1",
+				"id": "xxdd00xxxx",
+				"room":[
+					{
+						"meetting": [
+							{
+								"meetId": "xxdd00xxxx",
+								"type": "1",
+								"booked": "1"
+						   },
+						   {
+								"meetId": "xxdd00xxxx",
+								"type": "2",
+								"booked": "0"
+						   },
+						   {
+								"meetId": "xxdd00xxxx",
+								"type": "3",
+								"booked": "0"
+						   }
+						],
+						"roomId": "xxdd00xxxx",
+						"type": "2"
+					},
+					{
+						"meetting": [
+							{
+								"meetId": "xxdd00xxxx",
+								"type": "1",
+								"booked": "1"
+						   },
+						   {
+								"meetId": "xxdd00xxxx",
+								"type": "2",
+								"booked": "0"
+						   }
+						],
+						"roomId": "xxdd00xxxx",
+						"type": "1"
+					}
+				]
+			},
+			{
+				"day": "2018-12-12",
+				"type": "2",
+				"room":[
+					{
+						"meetting": [
+							{
+								"meetId": "xxdd00xxxx",
+								"type": "1",
+								"booked": "0"
+						   },
+						   {
+								"meetId": "xxdd00xxxx",
+								"type": "2",
+								"booked": "0"
+						   },
+						   {
+								"meetId": "xxdd00xxxx",
+								"type": "3",
+								"booked": "0"
+						   }
+						],
+						"roomId": "xxdd00xxxx",
+						"type": "2"
+					},
+					{
+						"meetting": [
+							{
+								"meetId": "xxdd00xxxx",
+								"type": "1",
+								"booked": "0"
+						   },
+						   {
+								"meetId": "xxdd00xxxx",
+								"type": "2",
+								"booked": "0"
+						   },
+						   {
+								"meetId": "xxdd00xxxx",
+								"type": "3",
+								"booked": "0"
+						   }
+						],
+						"roomId": "xxdd00xxxx",
+						"type": "2"
+					},
+					{
+						"meetting": [
+							{
+								"meetId": "xxdd00xxxx",
+								"type": "1",
+								"booked": "0"
+						   },
+						   {
+								"meetId": "xxdd00xxxx",
+								"type": "2",
+								"booked": "0"
+						   },
+						   {
+								"meetId": "xxdd00xxxx",
+								"type": "3",
+								"booked": "0"
+						   }
+						],
+						"roomId": "xxdd00xxxx",
+						"type": "1"
+					},
+					{
+						"meetting": [
+							{
+								"meetId": "xxdd00xxxx",
+								"type": "1",
+								"booked": "1"
+						   },
+						   {
+								"meetId": "xxdd00xxxx",
+								"type": "2",
+								"booked": "0"
+						   }
+						],
+						"roomId": "xxdd00xxxx",
+						"type": "2"
+					},
+					{
+						"meetting": [
+							{
+								"meetId": "xxdd00xxxx",
+								"type": "1",
+								"booked": "1"
+						   },
+						   {
+								"meetId": "xxdd00xxxx",
+								"type": "2",
+								"booked": "0"
+						   }
+						],
+						"roomId": "xxdd00xxxx",
+						"type": "2"
+					}
+				]
+			},
+			{
+				"day": "2018-12-13",
+				"type": "3"
+			},
+			{
+				"day": "2018-12-14",
+				"type": "4",
+				"room":[
+					{
+						"meetting": [
+							{
+								"meetId": "xxdd00xxxx",
+								"type": "1",
+								"booked": "0"
+						   },
+						   {
+								"meetId": "xxdd00xxxx",
+								"type": "2",
+								"booked": "0"
+						   },
+						   {
+								"meetId": "xxdd00xxxx",
+								"type": "3",
+								"booked": "0"
+						   }
+						],
+						"roomId": "xxdd00xxxx",
+						"type": "1"
+					},
+					{
+						"meetting": [
+							{
+								"meetId": "xxdd00xxxx",
+								"type": "1",
+								"booked": "0"
+						   },
+						   {
+								"meetId": "xxdd00xxxx",
+								"type": "2",
+								"booked": "0"
+						   },
+						   {
+								"meetId": "xxdd00xxxx",
+								"type": "3",
+								"booked": "0"
+						   }
+						],
+						"roomId": "xxdd00xxxx",
+						"type": "1"
+					},
+					{
+						"meetting": [
+							{
+								"meetId": "xxdd00xxxx",
+								"type": "1",
+								"booked": "0"
+						   },
+						   {
+								"meetId": "xxdd00xxxx",
+								"type": "2",
+								"booked": "0"
+						   },
+						   {
+								"meetId": "xxdd00xxxx",
+								"type": "3",
+								"booked": "0"
+						   }
+						],
+						"roomId": "xxdd00xxxx",
+						"type": "1"
+					},
+					{
+						"meetting": [
+							{
+								"meetId": "xxdd00xxxx",
+								"type": "1",
+								"booked": "1"
+						   },
+						   {
+								"meetId": "xxdd00xxxx",
+								"type": "2",
+								"booked": "0"
+						   }
+						],
+						"roomId": "xxdd00xxxx",
+						"type": "2"
+					},
+					{
+						"meetting": [
+							{
+								"meetId": "xxdd00xxxx",
+								"type": "1",
+								"booked": "1"
+						   },
+						   {
+								"meetId": "xxdd00xxxx",
+								"type": "2",
+								"booked": "0"
+						   }
+						],
+						"roomId": "xxdd00xxxx",
+						"type": "2"
+					}
+				]
+			}
+		];
+		
+		var data2 = [
+			{
+				"day": "2019-1-11",
+				"type": "1",
+				"id": "xxdd00xxxx",
+				"room":[
+					{
+						"meetting": [
+							{
+								"meetId": "xxdd00xxxx",
+								"type": "1",
+								"booked": "1"
+						   },
+						   {
+								"meetId": "xxdd00xxxx",
+								"type": "2",
+								"booked": "0"
+						   },
+						   {
+								"meetId": "xxdd00xxxx",
+								"type": "3",
+								"booked": "0"
+						   }
+						],
+						"roomId": "xxdd00xxxx",
+						"type": "1"
+					},
+					{
+						"meetting": [
+							{
+								"meetId": "xxdd00xxxx",
+								"type": "1",
+								"booked": "1"
+						   },
+						   {
+								"meetId": "xxdd00xxxx",
+								"type": "2",
+								"booked": "0"
+						   }
+						],
+						"roomId": "xxdd00xxxx",
+						"type": "2"
+					}
+				]
+			},
+			{
+				"day": "2019-1-12",
+				"type": "2",
+				"room":[
+					{
+						"meetting": [
+							{
+								"meetId": "xxdd00xxxx",
+								"type": "1",
+								"booked": "0"
+						   },
+						   {
+								"meetId": "xxdd00xxxx",
+								"type": "2",
+								"booked": "0"
+						   },
+						   {
+								"meetId": "xxdd00xxxx",
+								"type": "3",
+								"booked": "0"
+						   }
+						],
+						"roomId": "xxdd00xxxx",
+						"type": "1"
+					},
+					{
+						"meetting": [
+							{
+								"meetId": "xxdd00xxxx",
+								"type": "1",
+								"booked": "0"
+						   },
+						   {
+								"meetId": "xxdd00xxxx",
+								"type": "2",
+								"booked": "0"
+						   },
+						   {
+								"meetId": "xxdd00xxxx",
+								"type": "3",
+								"booked": "0"
+						   }
+						],
+						"roomId": "xxdd00xxxx",
+						"type": "1"
+					},
+					{
+						"meetting": [
+							{
+								"meetId": "xxdd00xxxx",
+								"type": "1",
+								"booked": "0"
+						   },
+						   {
+								"meetId": "xxdd00xxxx",
+								"type": "2",
+								"booked": "0"
+						   },
+						   {
+								"meetId": "xxdd00xxxx",
+								"type": "3",
+								"booked": "0"
+						   }
+						],
+						"roomId": "xxdd00xxxx",
+						"type": "1"
+					},
+					{
+						"meetting": [
+							{
+								"meetId": "xxdd00xxxx",
+								"type": "1",
+								"booked": "1"
+						   },
+						   {
+								"meetId": "xxdd00xxxx",
+								"type": "2",
+								"booked": "0"
+						   }
+						],
+						"roomId": "xxdd00xxxx",
+						"type": "2"
+					},
+					{
+						"meetting": [
+							{
+								"meetId": "xxdd00xxxx",
+								"type": "1",
+								"booked": "1"
+						   },
+						   {
+								"meetId": "xxdd00xxxx",
+								"type": "2",
+								"booked": "0"
+						   }
+						],
+						"roomId": "xxdd00xxxx",
+						"type": "2"
+					}
+				]
+			},
+			{
+				"day": "2019-1-13",
+				"type": "3"
+			},
+			{
+				"day": "2019-1-14",
+				"type": "4",
+				"room":[
+					{
+						"meetting": [
+							{
+								"meetId": "xxdd00xxxx",
+								"type": "1",
+								"booked": "0"
+						   },
+						   {
+								"meetId": "xxdd00xxxx",
+								"type": "2",
+								"booked": "0"
+						   },
+						   {
+								"meetId": "xxdd00xxxx",
+								"type": "3",
+								"booked": "0"
+						   }
+						],
+						"roomId": "xxdd00xxxx",
+						"type": "1"
+					},
+					{
+						"meetting": [
+							{
+								"meetId": "xxdd00xxxx",
+								"type": "1",
+								"booked": "0"
+						   },
+						   {
+								"meetId": "xxdd00xxxx",
+								"type": "2",
+								"booked": "0"
+						   },
+						   {
+								"meetId": "xxdd00xxxx",
+								"type": "3",
+								"booked": "0"
+						   }
+						],
+						"roomId": "xxdd00xxxx",
+						"type": "1"
+					},
+					{
+						"meetting": [
+							{
+								"meetId": "xxdd00xxxx",
+								"type": "1",
+								"booked": "0"
+						   },
+						   {
+								"meetId": "xxdd00xxxx",
+								"type": "2",
+								"booked": "0"
+						   },
+						   {
+								"meetId": "xxdd00xxxx",
+								"type": "3",
+								"booked": "0"
+						   }
+						],
+						"roomId": "xxdd00xxxx",
+						"type": "1"
+					},
+					{
+						"meetting": [
+							{
+								"meetId": "xxdd00xxxx",
+								"type": "1",
+								"booked": "1"
+						   },
+						   {
+								"meetId": "xxdd00xxxx",
+								"type": "2",
+								"booked": "0"
+						   }
+						],
+						"roomId": "xxdd00xxxx",
+						"type": "2"
+					},
+					{
+						"meetting": [
+							{
+								"meetId": "xxdd00xxxx",
+								"type": "1",
+								"booked": "1"
+						   },
+						   {
+								"meetId": "xxdd00xxxx",
+								"type": "2",
+								"booked": "0"
+						   }
+						],
+						"roomId": "xxdd00xxxx",
+						"type": "2"
+					}
+				]
+			}
+		];
+		
+		var data3 = [
+			{
+				"day": "2018-11-11",
+				"type": "1",
+				"id": "xxdd00xxxx",
+				"room":[
+					{
+						"meetting": [
+							{
+								"meetId": "xxdd00xxxx",
+								"type": "1",
+								"booked": "1"
+						   },
+						   {
+								"meetId": "xxdd00xxxx",
+								"type": "2",
+								"booked": "0"
+						   },
+						   {
+								"meetId": "xxdd00xxxx",
+								"type": "3",
+								"booked": "0"
+						   }
+						],
+						"roomId": "xxdd00xxxx",
+						"type": "1"
+					},
+					{
+						"meetting": [
+							{
+								"meetId": "xxdd00xxxx",
+								"type": "1",
+								"booked": "1"
+						   },
+						   {
+								"meetId": "xxdd00xxxx",
+								"type": "2",
+								"booked": "0"
+						   }
+						],
+						"roomId": "xxdd00xxxx",
+						"type": "2"
+					}
+				]
+			},
+			{
+				"day": "2018-11-12",
+				"type": "2",
+				"room":[
+					{
+						"meetting": [
+							{
+								"meetId": "xxdd00xxxx",
+								"type": "1",
+								"booked": "0"
+						   },
+						   {
+								"meetId": "xxdd00xxxx",
+								"type": "2",
+								"booked": "0"
+						   },
+						   {
+								"meetId": "xxdd00xxxx",
+								"type": "3",
+								"booked": "0"
+						   }
+						],
+						"roomId": "xxdd00xxxx",
+						"type": "1"
+					},
+					{
+						"meetting": [
+							{
+								"meetId": "xxdd00xxxx",
+								"type": "1",
+								"booked": "0"
+						   },
+						   {
+								"meetId": "xxdd00xxxx",
+								"type": "2",
+								"booked": "0"
+						   },
+						   {
+								"meetId": "xxdd00xxxx",
+								"type": "3",
+								"booked": "0"
+						   }
+						],
+						"roomId": "xxdd00xxxx",
+						"type": "1"
+					},
+					{
+						"meetting": [
+							{
+								"meetId": "xxdd00xxxx",
+								"type": "1",
+								"booked": "0"
+						   },
+						   {
+								"meetId": "xxdd00xxxx",
+								"type": "2",
+								"booked": "0"
+						   },
+						   {
+								"meetId": "xxdd00xxxx",
+								"type": "3",
+								"booked": "0"
+						   }
+						],
+						"roomId": "xxdd00xxxx",
+						"type": "1"
+					},
+					{
+						"meetting": [
+							{
+								"meetId": "xxdd00xxxx",
+								"type": "1",
+								"booked": "1"
+						   },
+						   {
+								"meetId": "xxdd00xxxx",
+								"type": "2",
+								"booked": "0"
+						   }
+						],
+						"roomId": "xxdd00xxxx",
+						"type": "2"
+					},
+					{
+						"meetting": [
+							{
+								"meetId": "xxdd00xxxx",
+								"type": "1",
+								"booked": "1"
+						   },
+						   {
+								"meetId": "xxdd00xxxx",
+								"type": "2",
+								"booked": "0"
+						   }
+						],
+						"roomId": "xxdd00xxxx",
+						"type": "2"
+					}
+				]
+			},
+			{
+				"day": "2018-11-13",
+				"type": "3"
+			},
+			{
+				"day": "2018-11-14",
+				"type": "4",
+				"room":[
+					{
+						"meetting": [
+							{
+								"meetId": "xxdd00xxxx",
+								"type": "1",
+								"booked": "0"
+						   },
+						   {
+								"meetId": "xxdd00xxxx",
+								"type": "2",
+								"booked": "0"
+						   },
+						   {
+								"meetId": "xxdd00xxxx",
+								"type": "3",
+								"booked": "0"
+						   }
+						],
+						"roomId": "xxdd00xxxx",
+						"type": "1"
+					},
+					{
+						"meetting": [
+							{
+								"meetId": "xxdd00xxxx",
+								"type": "1",
+								"booked": "0"
+						   },
+						   {
+								"meetId": "xxdd00xxxx",
+								"type": "2",
+								"booked": "0"
+						   },
+						   {
+								"meetId": "xxdd00xxxx",
+								"type": "3",
+								"booked": "0"
+						   }
+						],
+						"roomId": "xxdd00xxxx",
+						"type": "1"
+					},
+					{
+						"meetting": [
+							{
+								"meetId": "xxdd00xxxx",
+								"type": "1",
+								"booked": "0"
+						   },
+						   {
+								"meetId": "xxdd00xxxx",
+								"type": "2",
+								"booked": "0"
+						   },
+						   {
+								"meetId": "xxdd00xxxx",
+								"type": "3",
+								"booked": "0"
+						   }
+						],
+						"roomId": "xxdd00xxxx",
+						"type": "1"
+					},
+					{
+						"meetting": [
+							{
+								"meetId": "xxdd00xxxx",
+								"type": "1",
+								"booked": "1"
+						   },
+						   {
+								"meetId": "xxdd00xxxx",
+								"type": "2",
+								"booked": "0"
+						   }
+						],
+						"roomId": "xxdd00xxxx",
+						"type": "2"
+					},
+					{
+						"meetting": [
+							{
+								"meetId": "xxdd00xxxx",
+								"type": "1",
+								"booked": "1"
+						   },
+						   {
+								"meetId": "xxdd00xxxx",
+								"type": "2",
+								"booked": "0"
+						   }
+						],
+						"roomId": "xxdd00xxxx",
+						"type": "2"
+					}
+				]
+			}
+		];
+		
+		WC.calender.init({
+			selecter: 'calendar_container',
+			toolbar: 'calendar_toolbar',
+			currentData: data,
+			preMonth: {
+				'btn': 'wc_pre_month',
+				'call': function(preTime){
+					setTimeout(function(){
+						WC.calender.load(data3, preTime);
+					}, 1000 * 2);
+				}
+			},
+			nextMonth: {
+				'btn': 'wc_next_month',
+				'call': function(nextTime){
+					setTimeout(function(){
+						WC.calender.load(data2, nextTime);
+					}, 1000 * 2);
+				}
+			},
+			dayClick: function(arg){
+//				console.log(arg.day);
+//				console.log(arg.id);
+//				console.log(arg.room.length);
+			},
+			roomClick: function(arg){
+//				console.log(arg.booked);
+//				console.log(arg.meetId);
+			}
+		});
+							
+	</script>
+	</body>
+</html>
