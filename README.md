@@ -253,33 +253,34 @@ var data = [
 			}
 		];
 
+// 初始化
 WC.calender.init({
-	selecter: 'calendar_container',
-	toolbar: 'calendar_toolbar',
-	currentData: data,
-	preMonth: {
-		'btn': 'wc_pre_month',
-		'call': function(preTime){
-			setTimeout(function(){
-				WC.calender.load(data3, preTime);
-			}, 1000 * 2);
-		}
-	},
-	nextMonth: {
-		'btn': 'wc_next_month',
-		'call': function(nextTime){
-			setTimeout(function(){
-				WC.calender.load(data2, nextTime);
-			}, 1000 * 2);
-		}
-	},
-	dayClick: function(arg){
+selecter: 'calendar_container',
+toolbar: 'calendar_toolbar',
+currentData: data,
+preMonth: {
+'btn': 'wc_pre_month',
+'call': function(preTime){
+setTimeout(function(){
+WC.calender.load(data3, preTime);
+}, 1000 * 2);
+}
+},
+nextMonth: {
+'btn': 'wc_next_month',
+'call': function(nextTime){
+setTimeout(function(){
+WC.calender.load(data2, nextTime);
+}, 1000 * 2);
+}
+},
+dayClick: function(arg){
 //				console.log(arg.day);
 //				console.log(arg.id);
 //				console.log(arg.room.length);
-	},
-	roomClick: function(arg){
+}, 
+roomClick: function(arg){
 //				console.log(arg.booked);
 //				console.log(arg.meetId);
-	}
+}
 });
