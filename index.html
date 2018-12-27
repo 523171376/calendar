@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>日历控件V1.0.0</title>
-		<link rel="stylesheet" type="text/css" href="css/calender-min-1.0.0.css"/>
+		<link rel="stylesheet" type="text/css" href="css/calender-1.0.0.css"/>
 		<script src="js/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
 		
 	</head>
@@ -35,7 +35,7 @@
 		</div>
 		
 		
-	<script src="js/calendar-min-1.0.0.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/calendar-1.0.0.js" type="text/javascript" charset="utf-8"></script>
 	<script>
 		
 		var data = [
@@ -803,17 +803,17 @@
 			currentData: data,
 			preMonth: {
 				'btn': 'wc_pre_month',
-				'call': function(preTime){
+				'call': function(time){
 					setTimeout(function(){
-						WC.calender.load(data3, preTime);
+						WC.calender.load(data3);
 					}, 1000 * 2);
 				}
 			},
 			nextMonth: {
 				'btn': 'wc_next_month',
-				'call': function(nextTime){
+				'call': function(time){
 					setTimeout(function(){
-						WC.calender.load(data2, nextTime);
+						WC.calender.load(data2);
 					}, 1000 * 2);
 				}
 			},
